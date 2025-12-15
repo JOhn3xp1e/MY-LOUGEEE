@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIFISHHHH</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <div class="app-cont    uainer">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="images/Lougee Neyra.jpg" alt="Lougee Neyra" id="profileAvatar">
+                <h2>Lougee Neyra</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="nav-item"><a href="#" class="nav-link active" data-page="home"><span class="icon">🏠</span><span>Home / Dashboard</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="profile"><span class="icon">👤</span><span>Idol Profile</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="photos"><span class="icon">🖼️</span><span>Photos</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="videos"><span class="icon">🎬</span><span>Videos</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="notes"><span class="icon">📝</span><span>Notes / Facts</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="favorites"><span class="icon">⭐</span><span>Favorites</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="timeline"><span class="icon">📅</span><span>Timeline</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-page="settings"><span class="icon">⚙️</span><span>Settings</span></a></li>
+            </ul>
+            <button class="toggle-sidebar" id="toggleSidebar"><span class="icon">←</span></button>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+                <div class="d-flex align-center">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle"><span class="icon">☰</span></button>
+                    <h1 class="page-title" id="pageTitle">Dashboard</h1>
+                </div>
+                <button class="theme-toggle" id="themeToggle"><span class="icon">🌙</span><span>Dark Mode</span></button>
+            </div>
+            <div id="pageContent">
+                <div class="page" id="homePage">
+                    <div class="card">
+                        <h2 class="card-title"><span class="icon">🏠</span>HELLO, LOUGEEEEEEEE</h2>
+                        <p>Ano ang tawag sa isdang manipis? edi maniFISH!</p>
+                        <div class="mt-20">
+                            <h3>Quick Stats</h3>
+                            <div class="d-flex gap-20 mt-20" style="flex-wrap:wrap">
+                                <div class="card" style="flex:1;min-width:200px"><h4>Photos</h4><p id="photoCount">0</p></div>
+                                <div class="card" style="flex:1;min-width:200px"><h4>Videos</h4><p id="videoCount">0</p></div>
+                                <div class="card" style="flex:1;min-width:200px"><h4>Notes</h4><p id="noteCount">0</p></div>
+                                <div class="card" style="flex:1;min-width:200px"><h4>Favorites</h4><p id="favoriteCount">0</p></div>
+                            </div>
+                        </div>
+                        <div class="mt-20">
+                            <h3>Quick Actions</h3>
+                            <div class="d-flex gap-10 mt-20" style="flex-wrap:wrap">
+                                <button class="btn" id="addPhotoBtn"><span class="icon">+</span>Add Photo</button>
+                                <button class="btn" id="addVideoBtn"><span class="icon">+</span>Add Video</button>
+                                <button class="btn" id="addNoteBtn"><span class="icon">+</span>Add Note</button>
+                                <button class="btn btn-secondary" id="backupBtn"><span class="icon">💾</span>Backup Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="profilePage" style="display:none">
+                    <div class="profile-header">
+                        <img src="images/Lougee Neyra.jpg" alt="Lougee Neyra" class="profile-avatar" id="profileAvatarImg">
+                        <div class="profile-info">
+                            <h1 class="profile-name" id="profileName">Lougee Neyra</h1>
+                            <p class="profile-bio" id="profileBio">TikTok influencer and content creator.</p>
+                            <div><p><strong>Birthday:</strong><span id="profileBirthday">March 15, 1999</span></p><p><strong>Last Updated:</strong><span id="profileUpdated">Just now</span></p></div>
+                            <div class="social-links" id="socialLinks">
+                                <a href="#" class="social-link" title="TikTok"><img src="images/tiktok.png" alt="TikTok" class="social-logo"></a>
+                                <a href="#" class="social-link" title="Instagram"><img src="images/instagram.png" alt="Instagram" class="social-logo"></a>
+                                <a href="#" class="social-link" title="YouTube"><img src="images/youtube.png" alt="YouTube" class="social-logo"></a>
+                                <a href="#" class="social-link" title="Twitter"><img src="images/twitter.png" alt="Twitter" class="social-logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card edit-profile-card">
+                        <h2 class="card-title"><span class="icon">✏️</span> Edit Profile</h2>
+                        <form id="profileForm" class="edit-profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="editName"><span class="icon">👤</span> Name</label>
+                                    <input type="text" class="form-control" id="editName" placeholder="Enter full name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="editBirthday"><span class="icon">🎂</span> Birthday</label>
+                                    <input type="text" class="form-control" id="editBirthday" placeholder="e.g., March 15, 1999">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="editBio"><span class="icon">📝</span> Bio</label>
+                                <textarea class="form-control" id="editBio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"><span class="icon">🔗</span> Social Links</label>
+                                <div class="social-links-grid">
+                                    <div class="social-input-group">
+                                        <input type="text" class="form-control" id="editTikTok" placeholder="https://tiktok.com/@username">
+                                        <small class="form-hint">Enter your TikTok profile URL (e.g., https://tiktok.com/@lougeeneyra)</small>
+                                    </div>
+                                    <div class="social-input-group">
+                                        <input type="text" class="form-control" id="editInstagram" placeholder="https://instagram.com/username">
+                                    </div>
+                                    <div class="social-input-group">
+                                        <input type="text" class="form-control" id="editYouTube" placeholder="https://youtube.com/channel/...">
+                                    </div>
+                                    <div class="social-input-group">
+                                        <input type="text" class="form-control" id="editTwitter" placeholder="https://twitter.com/username">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="page" id="photosPage" style="display:none"></div>
+                <div class="page" id="videosPage" style="display:none"></div>
+                <div class="page" id="notesPage" style="display:none"></div>
+                <div class="page" id="favoritesPage" style="display:none"></div>
+                <div class="page" id="timelinePage" style="display:none"></div>
+                <div class="page" id="settingsPage" style="display:none"></div>
+            </div>
+        </main>
+        <div class="modal" id="addPhotoModal"><div class="modal-content"><div class="modal-header"><h2>Add New Photo</h2><button class="close-modal" id="closePhotoModal">×</button></div><form id="addPhotoForm"><div class="form-group"><label class="form-label" for="photoTitle">Photo Title</label><input type="text" class="form-control" id="photoTitle" required></div><div class="form-group"><label class="form-label" for="photoDate">Date</label><input type="date" class="form-control" id="photoDate" required></div><div class="form-group"><label class="form-label" for="photoFile">Choose Image File</label><input type="file" class="form-control" id="photoFile" accept="image/*" required></div><button type="submit" class="btn">Add Photo</button></form></div></div>
+        <div class="modal" id="addVideoModal"><div class="modal-content"><div class="modal-header"><h2>Add New Video</h2><button class="close-modal" id="closeVideoModal">×</button></div><form id="addVideoForm"><div class="form-group"><label class="form-label" for="videoTitle">Video Title</label><input type="text" class="form-control" id="videoTitle" required></div><div class="form-group"><label class="form-label" for="videoCategory">Category</label><select class="form-control" id="videoCategory" required><option value="Performance">Performance</option><option value="Interview">Interview</option><option value="Vlog">Vlog</option><option value="Behind the Scenes">Behind the Scenes</option><option value="TikTok">TikTok</option></select></div><div class="form-group"><label class="form-label" for="videoUrl">Video URL</label><input type="text" class="form-control" id="videoUrl" placeholder="Enter YouTube or TikTok video URL" required></div><button type="submit" class="btn">Add Video</button></form></div></div>
+        <div class="modal" id="addNoteModal"><div class="modal-content"><div class="modal-header"><h2>Add New Note</h2><button class="close-modal" id="closeNoteModal">×</button></div><form id="addNoteForm"><div class="form-group"><label class="form-label" for="noteTitle">Note Title</label><input type="text" class="form-control" id="noteTitle" required></div><div class="form-group"><label class="form-label" for="noteContent">Content</label><textarea class="form-control" id="noteContent" rows="5" required></textarea></div><div class="form-group"><label class="form-label" for="noteCategory">Category</label><select class="form-control" id="noteCategory"><option value="Fun Fact">Fun Fact</option><option value="Quote">Quote</option><option value="Achievement">Achievement</option><option value="Personal Thought">Personal Thought</option></select></div><button type="submit" class="btn">Add Note</button></form></div></div>
+        <div class="full-photo-modal" id="fullPhotoModal">
+            <div class="full-photo-content">
+                <button class="close-full-photo" id="closeFullPhoto">×</button>
+                <img class="full-photo-img" id="fullPhotoImg" src="" alt="">
+                <div class="full-photo-info">
+                    <div class="full-photo-title" id="fullPhotoTitle"></div>
+                    <div class="full-photo-date" id="fullPhotoDate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
